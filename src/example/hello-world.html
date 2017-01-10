@@ -1,5 +1,7 @@
-<template args="$controller">
-  <span class="card-title">Hello World, {$controller.name}!</span>
-  <a href="#" click.trigger="$controller.updateName()">Change helloworld name</a> 
+<template>
+  <span class="card-title">Hello World, ${this.name}!</span>
+  <p>
+  	<a href="#" click.trigger="this.updateName">Change helloworld name</a>
+  </p>   
   <content></content>
 </template>
