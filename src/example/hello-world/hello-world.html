@@ -1,0 +1,26 @@
+<template>
+	<style type="text/css">
+		.hello-world{
+			border:5px solid #fff;
+			border-radius:5%;
+			width:250px;
+			height:180px;
+			font-weight:bolder;
+			color:#fff;
+			float: left;
+			margin:80px 20px 20px 20px;
+			padding:10px;
+		}
+		.hello-world a{
+			color:#fff;
+		}
+	</style>
+	<span class="card-title">Hello World - Example</span>
+	<p>
+		<span class="card-title">Hello World, ${this.name}!</span>
+	</p>
+	<p>
+		<a href="#" click.trigger="this.updateName">Change helloworld name</a>
+	</p>   
+	<content></content>
+</template>

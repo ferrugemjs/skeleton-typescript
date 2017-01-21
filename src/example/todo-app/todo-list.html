@@ -1,0 +1,37 @@
+<template class="todo-list">
+	<require from="./todo-item"></require>
+	<style type="text/css">
+		.todo-list{
+			border:5px solid #fff;
+			border-radius:5%;
+			width:250px;
+			min-height:180px;
+			height: auto;
+			font-weight:bolder;
+			color:#fff;
+			float: left;
+			margin:80px 20px 20px 20px;
+			padding:10px;
+		}
+		.todo-list a{
+			color:#fff;
+		}
+		.todo-list input{
+			border:2px solid #fff;
+			width:94%;
+			border-radius:4%;
+			margin-top:10px;
+			margin-left:2%;
+			height:25px;
+			font-weight:bolder;
+			color:purple;
+		}
+	</style>
+	<span class="card-title">TODO - Example</span>
+	<input type="text" placeholder="...do a task!" value="${new String('')}" change.trigger="this.add">
+
+	<for each="item in this.itens">
+		<todo-item id="${item.id}" desc="${item.desc}" done="${item.done}"></todo-item>
+	</for>
+	
+</template>
