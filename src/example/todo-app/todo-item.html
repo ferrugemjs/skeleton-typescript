@@ -1,6 +1,15 @@
 <template>
-	<p>
-		<span click.trigger="this.MarkAsDone">[${(this.done?'x':'-')}]</span>
-		<span> ${this.desc}</span>
+	<style>
+		.todo-item .is-done span.desc{
+			text-decoration:line-through;
+		}
+		.todo-item .mark-action{
+			width: 28px;
+			float: left;
+		}
+	</style>
+	<p class="${(this.done?'is-done':'')}">
+		<span class="mark-action" click.trigger="this.MarkAsDone">[${(this.done?'x':' ')}]</span>
+		<span class="desc"> ${this.desc}</span>
 	</p>
 </template>
