@@ -7,9 +7,9 @@ export class TodoList{
 		];
 	}
 	private add(evt:Event):void{
-		let {value} = evt.target;
+		let {value} = <any>evt.target;
 		if(value){
-			this.itens.push({
+			this.itens.unshift({
 				idItem:this.itens.length+1
 				,desc:value
 				,creation:new Date()

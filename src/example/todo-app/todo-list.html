@@ -1,37 +1,16 @@
-<template class="todo-list">
+<template class="todo-list example-basic-box">
+	<require from="../commons/assets/commons-style.css!"></require>
 	<require from="./todo-item"></require>
 	<style type="text/css">
-		.todo-list{
-			border:5px solid #fff;
-			border-radius:5%;
-			width:250px;
-			
-			height: auto;
-			font-weight:bolder;
-			color:#fff;
-			float: left;
-			margin:80px 20px 20px 20px;
-			padding:10px;
-		}
 		.todo-list .item-area{
 			min-height:20px;
 		}
 		.todo-list a{
 			color:#fff;
 		}
-		.todo-list input{
-			border:2px solid #fff;
-			width:94%;
-			border-radius:4%;
-			margin-top:10px;
-			margin-left:2%;
-			height:25px;
-			font-weight:bolder;
-			color:purple;
-		}
 	</style>
-	<span class="card-title">TODO - Example</span>
-	<input type="text" placeholder="...do a task!" value="${new String('')}" change.trigger="this.add">
+	<h3 class="title">TODO - Example</h3>
+	<input class="simple" type="text" placeholder="...do a task!" value="${new String('')}" change.trigger="this.add">
 	<div class="item-area">
 		<for each="item in this.itens">
 			<todo-item id-item="${item.idItem}" desc="${item.desc}" done="${item.done}" on-marked.subscribe="this.mark"></todo-item>
@@ -43,4 +22,13 @@
 	<p>
 		<span click.trigger="this.archiveAllDone">[-] archive all done!</span>
 	</p>
+	<div class="list-concepts">
+		<span>Concepts</span>		
+		<span>&#10004; change the the css className. </span>
+		<span>&#10004; import a css file. </span>
+		<span>&#10004; embed style. </span>		
+		<span>&#10004; trigger a DOM method. </span>
+		<span>&#10004; import a sub-element. </span>
+		<span>&#10004; subscribe a sub-element event. </span>		
+	</div>
 </template>

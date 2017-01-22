@@ -1,0 +1,35 @@
+.example-basic-box{
+	border:5px solid #fff;
+	border-radius:5px;
+	width:27%;
+	min-height:180px;
+	height:auto;
+	color:#fff;
+	float: left;
+	margin:80px 20px 20px 20px;
+	padding:10px;
+}
+
+.example-basic-box .title{
+	font-weight:bolder;
+}
+.example-basic-box .list-concepts{
+	margin-bottom:20px;
+	float: left;
+}
+.example-basic-box .list-concepts span{
+	text-indent:5px;
+	width:100%;
+	height: 25px;
+	float: left;
+}
+input.simple{
+	border:2px solid #fff;
+	width:94%;
+	border-radius:2px;
+	margin-top:10px;
+	margin-left:2%;
+	height:25px;
+	font-weight:bolder;
+	color:purple;
+}
