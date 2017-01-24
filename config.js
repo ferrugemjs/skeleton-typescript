@@ -8,9 +8,9 @@ System.config({
   },
 
   map: {
-    "event-emitter-lite": "npm:event-emitter-lite@1.0.5",
-    "ferrugemjs": "npm:ferrugemjs@0.9.23",
     "css": "github:systemjs/plugin-css@0.1.32",
+    "event-emitter-lite": "npm:event-emitter-lite@1.0.5",
+    "ferrugemjs": "npm:ferrugemjs@0.9.25",
     "incremental-dom": "npm:incremental-dom@0.5.1",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
@@ -41,7 +41,7 @@ System.config({
       "isarray": "npm:isarray@1.0.0",
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:ferrugemjs@0.9.23": {
+    "npm:ferrugemjs@0.9.25": {
       "css": "github:systemjs/plugin-css@0.1.32",
       "incremental-dom": "npm:incremental-dom@0.5.1"
     },

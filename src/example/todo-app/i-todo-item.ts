@@ -1,5 +1,5 @@
 export interface ITodoItem{
-	idItem:number;
+	id:number;
 	desc:string;
 	done?:boolean;
 	creation:Date;

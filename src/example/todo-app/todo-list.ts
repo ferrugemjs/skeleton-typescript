@@ -3,14 +3,14 @@ export class TodoList{
 	private itens:ITodoItem[];
 	constructor(){
 		this.itens = [
-			{idItem:1,desc:'teste',creation:new Date()}
+			{id:1,desc:'teste',creation:new Date()}
 		];
 	}
 	private add(evt:Event):void{
 		let {value} = <any>evt.target;
 		if(value){
 			this.itens.unshift({
-				idItem:this.itens.length+1
+				id:this.itens.length+1
 				,desc:value
 				,creation:new Date()
 			});
@@ -19,7 +19,7 @@ export class TodoList{
 	}
 	private mark(pitem:ITodoItem):void{
 		let founded:boolean = this.itens.some(item=>{
-			if(item.idItem==pitem.idItem){
+			if(item.id==pitem.id){
 				item.done=pitem.done;
 				return true;
 			}

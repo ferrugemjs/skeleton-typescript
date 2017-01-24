@@ -13,7 +13,7 @@
 	<input class="simple" type="text" placeholder="...do a task!" value="${new String('')}" change.trigger="this.add">
 	<div class="item-area">
 		<for each="item in this.itens">
-			<todo-item id-item="${item.idItem}" desc="${item.desc}" done="${item.done}" on-marked.subscribe="this.mark"></todo-item>
+			<todo-item id="${item.id}" desc="${item.desc}" done="${item.done}" on-marked.subscribe="this.mark"></todo-item>
 		</for>
 	</div>
 	<p>
@@ -24,7 +24,7 @@
 	</p>
 	<div class="list-concepts">
 		<span>Concepts</span>		
-		<span>&#10004; change the the css className. </span>
+		<span>&#10004; change the css className. </span>
 		<span>&#10004; import a css file. </span>
 		<span>&#10004; embed style. </span>		
 		<span>&#10004; trigger a DOM method. </span>

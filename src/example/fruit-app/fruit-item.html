@@ -7,6 +7,12 @@
 			background-repeat:no-repeat;
 			float: left;
 		}
+		.fruit-item .type_0{
+			background-image:url(dist/example/fruit-app/assets/bananas.png);
+		}
+		.fruit-item .type_1{
+			background-image:url(dist/example/fruit-app/assets/grapes-bunch.png);
+		}
 	</style>
-	<div style="${'background-image:url(dist/example/fruit-app/assets/'+(this.path)}" class="fruit"></div>
+	<div class="${'fruit type_'+(this.type)}"></div>
 </template>

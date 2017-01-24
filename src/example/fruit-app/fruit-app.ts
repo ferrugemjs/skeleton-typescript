@@ -1,11 +1,29 @@
-import {IFruit} from "./i-fruit";
+import fruitStore from "./fruit-store";
+
+import {IFruit,EFruitType} from "./i-fruit";
 
 export class FruitApp{
-	private fruits:IFruit[];
 	constructor(){
-		this.fruits = [
-		{id:1,desc:"banana"}
-		,{id:2,desc:"apple"}
-		];
+		fruitStore.onChange.subscribe(()=>{
+			this.refresh();
+		});
 	}
+	get fruits():IFruit[]{
+		return fruitStore.get();
+	}
+	addFruit(fruitType:EFruitType):void{
+	 	fruitStore.add({desc:'',type:fruitType});
+	}
+	allowDrop(evt:Event):void{
+		evt.preventDefault();
+	}
+	drag(fruitType:EFruitType,evt:Event):void{
+		evt.dataTransfer.setData("type",fruitType);
+	}
+	drop(evt:Event):void{
+		evt.preventDefault();
+		let data:EFruitType = evt.dataTransfer.getData("type");
+		this.addFruit(data);
+	}
+
 }
