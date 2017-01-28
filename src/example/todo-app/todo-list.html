@@ -11,7 +11,7 @@
 	</style>
 	<h3 class="title">TODO</h3>
 	<div class="example-basic-box-body">
-		<input class="simple" type="text" placeholder="...do a task!" value="${new String('')}" change.trigger="this.add">
+		<input class="simple" type="text" placeholder="...do a task!" value="${new String('')}" keypress.trigger="this.add">
 		<div class="item-area">
 			<for each="item in this.itens">
 				<todo-item id="${item.id}" desc="${item.desc}" done="${item.done}" on-marked.subscribe="this.mark"></todo-item>

@@ -7,14 +7,16 @@ export class TodoList{
 		];
 	}
 	private add(evt:Event):void{
-		let {value} = <any>evt.target;
-		if(value){
-			this.itens.unshift({
-				id:this.itens.length+1
-				,desc:value
-				,creation:new Date()
-			});
-			this.refresh();
+		if(evt.which == 13 || evt.keyCode == 13){
+			let value = evt.target.value;
+			if(value){
+				this.itens.unshift({
+					id:this.itens.length+1
+					,desc:value
+					,creation:new Date()
+				});
+				this.refresh();
+			}	
 		}		
 	}
 	private mark(pitem:ITodoItem):void{

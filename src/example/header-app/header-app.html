@@ -1,15 +1,23 @@
-<template>
+<template class="header-app">
 	<style type="text/css">
 		.header-app{
 			width:100%;
-			height:170px;
-			background-color:#e6e63e;
+			height:170px;			
 			float: left;
 			text-align: center;
-			color: #4a4922;
-			padding-top:5px;
+			color: #4a4922;			
 			margin-bottom: 25px;
 			border-bottom: 8px solid #4a4922;
+			background-color:#e6e63e;
+			background-image:url("dist/example/commons/assets/bg-1.png");
+		}
+		.header-app .header-support{
+			padding-top:5px;
+			width:100%;
+			height:100%;
+			background-image:url("dist/example/commons/assets/transparency-bg.png");
+			background-repeat:repeat-x;	
+			background-position:top center;		
 		}
 		.header-app .img-fjs{
 			width:120px;
@@ -22,9 +30,9 @@
 
 		}
 	</style>
-	<span class="header-app">		
+	<div class="header-support">
 		<h1>${this.title}</h1>
 		<p><strong>Examples</strong></p>
-		<img class="img-fjs" src="dist/example/header-app/assets/ferrugemjs-logo.png">
-	</span>
+		<img class="img-fjs" src="dist/example/header-app/assets/ferrugemjs-logo.png">		
+	</div>
 </template>
