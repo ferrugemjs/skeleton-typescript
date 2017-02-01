@@ -19,7 +19,6 @@ export class TodoList{
 					,desc:value
 					,creation:new Date()
 				});
-				console.log(this);
 				this.refresh();
 			}	
 		}		

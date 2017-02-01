@@ -11,4 +11,7 @@ export class TodoItem implements ITodoItem{
 		this.done = !this.done;
 		this.onMarked.emit({id:this.id,done:this.done});
 	}
+	private detached(){
+		this.onMarked.unsubscribeAll();
+	}
 }
