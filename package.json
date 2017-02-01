@@ -9,7 +9,8 @@
     "watch": "gulp watch",
     "compile": "gulp compile",
     "convert": "gulp template",
-    "postinstall": "jspm install"
+    "postinstall": "jspm install",
+    "build2dist": "jspm bundle dist/example/init-app.html build.js --skip-source-maps --minify"
   },
   "author": "ferrugemjs",
   "license": "ISC",
@@ -18,7 +19,7 @@
     "dependencies": {
       "es6-shim": "npm:es6-shim@0.35.1",
       "event-emitter-lite": "npm:event-emitter-lite@1.0.5",
-      "ferrugemjs": "npm:ferrugemjs@^0.10.0",
+      "ferrugemjs": "npm:ferrugemjs@0.10.0",
       "ts-helpers": "npm:ts-helpers@1.1.1"
     },
     "devDependencies": {}

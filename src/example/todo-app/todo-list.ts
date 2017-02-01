@@ -1,20 +1,25 @@
 import {ITodoItem} from "./i-todo-item";
+import {IDOMEvent} from "../commons/i-event";
 export class TodoList{
+	private refresh:Function;
 	private itens:ITodoItem[];
+	private nextId:number;
 	constructor(){
+		this.nextId=0;
 		this.itens = [
-			{id:1,desc:'teste',creation:new Date()}
-		];
+			{id:this.nextId++,desc:'teste',creation:new Date()}
+		];		
 	}
-	private add(evt:Event):void{
+	private add(evt:IDOMEvent):void{
 		if(evt.which == 13 || evt.keyCode == 13){
 			let value = evt.target.value;
 			if(value){
 				this.itens.unshift({
-					id:this.itens.length+1
+					id:this.nextId++
 					,desc:value
 					,creation:new Date()
 				});
+				console.log(this);
 				this.refresh();
 			}	
 		}		
