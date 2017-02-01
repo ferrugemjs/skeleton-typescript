@@ -8,10 +8,12 @@ export class TodoItem implements ITodoItem{
 	public creation:Date;
 	public onMarked:EventEmitter<{id:number,done:boolean}> = new EventEmitter();
 	private MarkAsDone():void{
+		console.log(this.onMarked);
 		this.done = !this.done;
 		this.onMarked.emit({id:this.id,done:this.done});
 	}
 	private detached(){
+		console.log('hummmm hummmm')
 		this.onMarked.unsubscribeAll();
 	}
 }

@@ -37,7 +37,6 @@ export class TodoList{
 	}
 	private markAll(done:boolean):void{
 		this.itens.forEach(item=>item.done=done);
-		console.log(this.itens)
 		this.refresh();
 	}
 	private archiveAllDone():void{
