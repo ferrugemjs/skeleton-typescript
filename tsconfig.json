@@ -12,6 +12,10 @@
 		,"noEmitHelpers":true 
         ,"importHelpers":true
 		,"suppressImplicitAnyIndexErrors": true
+        ,"baseUrl": "./"
+        ,"paths": {
+            "tslib" : ["jspm_packages/npm/tslib@1.5.0/tslib.d.ts"]
+        }
     },
     "exclude": [
         "node_modules"
