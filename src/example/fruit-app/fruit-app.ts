@@ -1,10 +1,12 @@
 import fruitStore from "./fruit-store";
 import {IFruit,EFruitType} from "./i-fruit";
 import {IDOMEvent} from "../commons/i-event";
+import {FruitBasic} from "./fruit-basic";
 
-export class FruitApp{
+export class FruitApp extends FruitBasic{
 	private refresh:Function;
 	constructor(){
+		super();
 		fruitStore.onChange.subscribe(()=>{
 			this.refresh();
 		});

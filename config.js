@@ -12,6 +12,7 @@ System.config({
     "event-emitter-lite": "npm:event-emitter-lite@1.0.5",
     "ferrugemjs": "npm:ferrugemjs@0.10.6",
     "incremental-dom": "npm:incremental-dom@0.5.1",
+    "tslib": "npm:tslib@1.5.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },

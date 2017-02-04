@@ -10,6 +10,7 @@
 		,"declaration": false
 		,"removeComments":true
 		,"noEmitHelpers":true 
+        ,"importHelpers":true
 		,"suppressImplicitAnyIndexErrors": true
     },
     "exclude": [
