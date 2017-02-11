@@ -8,8 +8,12 @@
 			float: left;
 		}
 	</style>
-	<p class="${(this.done?'is-done':'')}">
-		<span class="mark-action" click.trigger="this.MarkAsDone">[${(this.done?'x':' ')}]</span>
-		<span class="desc"> ${this.desc}</span>
-	</p>
+	<div class="todo-item">
+		<p class="${(this.done?'is-done':'')}">
+			<span class="mark-action" click.trigger="this.MarkAsDone">
+				[${(this.done?'x':' ')}]
+			</span>
+			<span class="desc">${this.id} - ${this.desc} - ${this.done}</span>
+		</p>
+	</div>
 </template>

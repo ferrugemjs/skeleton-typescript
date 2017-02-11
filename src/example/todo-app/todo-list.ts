@@ -5,7 +5,7 @@ export class TodoList{
 	private itens:ITodoItem[];
 	private nextId:number;
 	constructor(){
-		this.nextId=0;
+		this.nextId=1;
 		this.itens = [
 			{id:this.nextId++,desc:'teste',creation:new Date()}
 		];		
