@@ -13,7 +13,7 @@
 			<span class="mark-action" click.trigger="this.MarkAsDone">
 				[${(this.done?'x':' ')}]
 			</span>
-			<span class="desc">${this.id} - ${this.desc} - ${this.done}</span>
+			<span class="desc" title="${'item:'+this.id+'-'+this.desc}">${this.desc}</span>
 		</p>
 	</div>
 </template>
