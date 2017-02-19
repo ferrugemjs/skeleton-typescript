@@ -10,7 +10,7 @@ function compile_ts(path){
             ,"./jspm_packages/npm/event-emitter-lite@*/*.d.ts"
         ])
         .pipe(ts(tsConfig))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(tsConfig.outDir));
 };
 

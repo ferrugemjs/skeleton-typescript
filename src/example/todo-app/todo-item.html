@@ -10,7 +10,10 @@
 	</style>
 	<div class="todo-item">
 		<p class="${(this.done?'is-done':'')}">
-			<span class="mark-action" click.trigger="this.MarkAsDone">
+			<span 
+				class="mark-action" 
+				click.trigger="this.MarkAsDone"
+			>
 				[${(this.done?'x':' ')}]
 			</span>
 			<span class="desc" title="${'item:'+this.id+'-'+this.desc}">${this.desc}</span>

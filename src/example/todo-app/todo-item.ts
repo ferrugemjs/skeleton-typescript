@@ -12,11 +12,9 @@ export class TodoItem implements ITodoItem{
 	}
 	private MarkAsDone():void{
 		this.done = !this.done;
-		console.log(this.onMarked);
 		this.onMarked.emit({id:this.id,done:this.done});
 	}
-	private detached(){
-		console.log(this);
+	private detached(){		
 		this.onMarked.unsubscribeAll();
 	}
 }
