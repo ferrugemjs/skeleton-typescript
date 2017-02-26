@@ -11,7 +11,8 @@ System.config({
     "css": "github:systemjs/plugin-css@0.1.32",
     "es6-shim": "npm:es6-shim@0.35.1",
     "event-emitter-lite": "npm:event-emitter-lite@1.0.5",
-    "ferrugemjs": "npm:ferrugemjs@0.11.2",
+    "ferrugemjs": "npm:ferrugemjs@0.11.7",
+    "ferrugemjs-router": "npm:ferrugemjs-router@0.0.3",
     "incremental-dom": "npm:incremental-dom@0.5.1",
     "tslib": "npm:tslib@1.5.0",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -46,15 +47,21 @@ System.config({
     "npm:es6-shim@0.35.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:ferrugemjs@0.11.2": {
-      "css": "github:systemjs/plugin-css@0.1.32",
-      "incremental-dom": "npm:incremental-dom@0.5.1"
+    "npm:ferrugemjs-router@0.0.3": {
+      "page": "npm:page@1.7.1"
     },
     "npm:incremental-dom@0.5.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:page@1.7.1": {
+      "path-to-regexp": "npm:path-to-regexp@1.2.1",
+      "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:path-to-regexp@1.2.1": {
+      "isarray": "npm:isarray@0.0.1"
     },
     "npm:process@0.11.9": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

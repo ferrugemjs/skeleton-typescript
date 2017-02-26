@@ -1,12 +1,15 @@
 <template>
-	<require from="./header-app/header-app"/>
+	<require from="ferrugemjs-router as rt" type="namespace"/>
+	<require from="./header-app/header-section"/>
 	<require from="./todo-app/todo-list as todo-app"/>
 	<require from="./hello-world/hello-world"/>
-	<require from="./fruit-app/fruit-app"/>
+	<require from="./fruit-app/fruit-app"/>	
 	<div>
-		<header-app/>
-		<hello-world name="${this.title}"/>
-		<todo-app/>
-		<fruit-app/>
+		<header-section/>
+		<rt:router-view style-name="custumizado">
+			<route path="/hello-world/:name" view-model="apps/hello-world/hello-world"/>
+			<route path="/todo-app" view-model="apps/todo-app/todo-list"/>
+			<route path="/fruit-app" view-model="apps/fruit-app/fruit-app"/>
+		</rt:router-view>
 	</div>
 </template>

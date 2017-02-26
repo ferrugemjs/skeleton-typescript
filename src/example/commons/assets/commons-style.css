@@ -4,40 +4,62 @@ body,html{
 }
 body{
 	font-family:Verdana;
-	background-color:purple;
+	background-color:#cecece;
 	background-image:url('bg-1.png');
 }
+.tab-links{
+	float:left;
+	width:100%;
+	margin:20px 0px 0px 0px;
+	padding:0px;
+}
+
+.tab-links li{
+	list-style:none;
+	float:left;
+	margin-right:9px;	
+	padding:5px;
+	padding-bottom:10px;
+
+}
+
+.tab-links a{
+	text-decoration:none;
+	color: #ddd;
+	margin-bottom:15px;
+}
+
+.tab-links li.selected{
+	border-bottom:3px solid #ddd;
+}
+
 .example-basic-box{
-	width:29%;
+	width:98%;
 	height:auto;
-	color:#fff;
+	color:#2d2d2d;
 	float: left;
-	margin:120px 20px 20px 20px;
+	margin-top:20px;
+	margin-left:1%;
 	
 }
 .example-basic-box .example-basic-box-body{
-	border:5px solid #fff;
-	border-radius:5px;
-	min-height:120px;
-	padding:10px;
+	padding:2px;
 }
 
 @media screen and (max-width: 768px) {
-  .example-basic-box{width:90%;margin:120px 0px 20px 5%}
+  .example-basic-box{width:90%;margin:20px 0px 20px 5%}
 }
 
 .example-basic-box .title{
-	font-weight:bolder;
+	margin-bottom:0px;
 }
-.example-basic-box .list-concepts{
-	border-top:2px solid #fff;
+.list-concepts{
 	margin-bottom:10px;
-	margin-top:25px;
+	margin-top:5px;
 	float: left;
 	padding-top:20px;
-	width: 100%;
 }
-.example-basic-box .list-concepts span{
+.list-concepts span{
 	text-indent:5px;
 	width:100%;
 	min-height:25px;
@@ -47,11 +69,9 @@ body{
 }
 input.simple{
 	border:2px solid #fff;
-	width:94%;
+	width:300px;
 	border-radius:2px;
 	margin-top:10px;
-	margin-left:2%;
 	height:25px;
-	font-weight:bolder;
-	color:purple;
+	color:#2d2d2d;
 }

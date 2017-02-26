@@ -1,0 +1,44 @@
+<template no-view-model="true">
+	<require from="./menu-section"/>
+	<style type="text/css">
+		.header-section{
+			width:100%;
+			height:auto;			
+			float: left;
+			color: #ddd;
+			background-color:#222;
+			background-image:url("dist/example/commons/assets/bg-1.png");
+		}
+		.header-section .header-support{
+			padding-top:5px;
+			width:100%;
+			height:100%;
+			background-image:url("dist/example/commons/assets/transparency-bg.png");
+			background-repeat:repeat-x;	
+			background-position:top center;	
+			float: left;	
+		}
+		.header-section .img-fjs{
+			width:35px;
+			margin:10px 10px 10px 10px;
+			float:left;
+		}
+		.header-section .header-support .title{
+			float: left;
+			font-size:20px;
+			margin-top:14px;
+		}
+		.header-section .header-support .sub-description{
+			float: left;
+		}
+	</style>
+	<div class="header-section">	
+		<div class="header-support">
+			<img class="img-fjs" src="https://github.com/ferrugemjs/library/raw/master/assets/img/new-logo2_98x129.png">
+			<div style="float:left;margin-top:10px">
+				<span class="title">FerrugemJS</span>	
+			</div>
+			<menu-section/>
+		</div>
+	</div>
+</template>

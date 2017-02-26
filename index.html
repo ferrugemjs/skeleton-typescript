@@ -12,6 +12,9 @@
   <body>    
     <div app="dist/example/init-app"></div>
     <script>
+      System.config({map:{
+        "apps":"dist/example"
+      }});
       System.import("ferrugemjs");
     </script>
   </body>

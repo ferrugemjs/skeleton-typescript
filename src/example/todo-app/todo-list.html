@@ -9,34 +9,36 @@
 			color:#fff;
 		}
 	</style>
-	<div class="todo-list example-basic-box">
-		<h3 class="title">TODO</h3>
-		<div class="example-basic-box-body">
-			<input class="simple" type="text" placeholder="...do a task!" value="${new String('')}" keypress.trigger="this.add">
-			<div class="item-area">				
-				<todo-item each="item in this.itens" 
-				key:id="${'todo_item_'+item.id}"
-				id="${item.id}" 
-				desc="${item.desc}" 
-				done="${item.done}" 
-				on-marked.subscribe="this.mark"
-				></todo-item>				
+	<div>
+		<div class="todo-list example-basic-box">
+			<h1 class="title">Todo App</h1>
+			<div class="example-basic-box-body">
+				<input class="simple" type="text" placeholder="...do a task!" value="${new String('')}" keypress.trigger="this.add">
+				<div class="item-area">				
+					<todo-item each="item in this.itens" 
+					key:id="${'todo_item_'+item.id}"
+					id="${item.id}" 
+					desc="${item.desc}" 
+					done="${item.done}" 
+					on-marked.subscribe="this.mark"
+					></todo-item>				
+				</div>
+				<p>
+					<span click.trigger="this.markAll(true)">[x] mark all ${this.itens.length} as done!</span>
+				</p>
+				<p>
+					<span click.trigger="this.archiveAllDone">[-] archive all done!</span>
+				</p>
 			</div>
-			<p>
-				<span click.trigger="this.markAll(true)">[x] mark all ${this.itens.length} as done!</span>
-			</p>
-			<p>
-				<span click.trigger="this.archiveAllDone">[-] archive all done!</span>
-			</p>
-		</div>
-		<div class="list-concepts">
-			<span>Concepts</span>		
-			<span>&#10004; change the css className. </span>
-			<span>&#10004; import a css file. </span>
-			<span>&#10004; embed style. </span>		
-			<span>&#10004; trigger a DOM method. </span>
-			<span>&#10004; import a sub-element. </span>
-			<span>&#10004; subscribe a sub-element event. </span>		
+			<div class="list-concepts">
+				<span>Concepts</span>		
+				<span>&#10004; change the css className. </span>
+				<span>&#10004; import a css file. </span>
+				<span>&#10004; embed style. </span>		
+				<span>&#10004; trigger a DOM method. </span>
+				<span>&#10004; import a sub-element. </span>
+				<span>&#10004; subscribe a sub-element event. </span>		
+			</div>
 		</div>
 	</div>
 </template>

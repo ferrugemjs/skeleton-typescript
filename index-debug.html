@@ -8,9 +8,12 @@
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
   </head>
-  <body>    
+  <body onload2="document.location.href='#!/hello-world/ferrugemjs'">    
     <div app="dist/example/init-app"></div>
     <script>
+      System.config({map:{
+        "apps":"dist/example"
+      }});
       System.import("ferrugemjs");
     </script>
   </body>

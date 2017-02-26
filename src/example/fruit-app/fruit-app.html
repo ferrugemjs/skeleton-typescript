@@ -6,13 +6,17 @@
 		.fruit-app{
 
 		}
+		.fruit-app .fruits{
+			width: 420px;
+			margin-top:20px;
+			float: left;
+		}
 		.fruit-app .fruit-basket{
-			width:170px;
+			width:420px;
+			text-align: center;
 			height:69px;
-			margin:0px auto;
 			margin-top:180px;
 			margin-bottom:20px;
-			display:block;
 			background-image:url(dist/example/fruit-app/assets/fruit-basket.png);
 			background-position:center top;
 			background-repeat:no-repeat;
@@ -21,6 +25,9 @@
 		.fruit-app .fruit-basket .fruit-item{
 			margin-bottom:129px;
 		}
+		.fruit-app .actions{
+			width:420px;
+		}
 		.fruit-app .actions .mark-action{
 			margin-right:5px;
 		}
@@ -28,42 +35,41 @@
 			cursor: move;
 		}
 	</style>
-	<div class="fruit-app example-basic-box">
-		<h3 class="title">Fruit App</h3>
-		<div class="example-basic-box-body">			
-			<div class="fruits" style="width:100%;margin-top:25px">
-				<img dragstart.trigger="this.drag(0)" draggable="true" click.trigger="this.addFruit(0)" data-type="0" style="float:left" src="dist/example/fruit-app/assets/bananas.png"/>		
-				<img dragstart.trigger="this.drag(1)" draggable="true" click.trigger="this.addFruit(1)" data-type="1" style="float:right" src="dist/example/fruit-app/assets/grapes-bunch.png"/>
+	<div>
+		<div class="fruit-app example-basic-box">
+			<h1 class="title">Fruit App</h1>
+			<div class="example-basic-box-body">			
+				<div class="fruits">
+					<img dragstart.trigger="this.drag(0)" draggable="true" click.trigger="this.addFruit(0)" data-type="0" style="float:left" src="dist/example/fruit-app/assets/bananas.png"/>		
+					<img dragstart.trigger="this.drag(1)" draggable="true" click.trigger="this.addFruit(1)" data-type="1" style="float:right" src="dist/example/fruit-app/assets/grapes-bunch.png"/>
+				</div>
+				<div class="fruit-basket" dragover.trigger="this.allowDrop" drop.trigger="this.drop">						
+					<fruit-item
+					each="fruit,$indx in this.fruits"
+					key:id="${'fruit_'+fruit.id}" 
+					id="${fruit.id}" 
+					desc="${fruit.desc}" 
+					type="${fruit.type}"
+					/>				
+				</div>
+				<div class="actions" onclick="${fruitStore.default.clear.bind(fruitStore.default)}">
+					<span class="mark-action">[-]</span>
+					<span class="desc">clear</span>
+					<span style="float:right">Fruit count:${this.fruits.length}</span>
+				</div>		
 			</div>
-			<div class="fruit-basket" dragover.trigger="this.allowDrop" drop.trigger="this.drop">						
-				<fruit-item
-				each="fruit,$indx in this.fruits"
-				key:id="${'fruit_'+fruit.id}" 
-				id="${fruit.id}" 
-				desc="${fruit.desc}" 
-				type="${fruit.type}"
-				/>				
-			</div>			
-			<p>
-				<span style="float:right">Fruit count:${this.fruits.length}</span>
-			</p>
-			<p class="actions" onclick="${fruitStore.default.clear.bind(fruitStore.default)}">
-				<span class="mark-action">[-]</span>
-				<span class="desc">clear</span>
-			</p>		
+			<div class="list-concepts">
+				<span>Concepts</span>
+				<span>&#10004; drag and drop. </span>
+				<span>&#10004; change the css className. </span>
+				<span>&#10004; import a css file. </span>
+				<span>&#10004; embed style. </span>	
+				<span>&#10004; one way data binding. </span>
+				<span>&#10004; import a sub-element. </span>
+				<span>&#10004; working with store. </span>	
+				<span>&#10004; event emitter. </span>
+				<span>&#10004; import other library/script. </span>
+			</div>		
 		</div>
-		<div class="list-concepts">
-			<span>Concepts</span>
-			<span>&#10004; drag and drop. </span>
-			<span>&#10004; change the css className. </span>
-			<span>&#10004; import a css file. </span>
-			<span>&#10004; embed style. </span>	
-			<span>&#10004; one way data binding. </span>
-			<span>&#10004; import a sub-element. </span>
-			<span>&#10004; working with store. </span>	
-			<span>&#10004; event emitter. </span>
-			<span>&#10004; import other library/script. </span>
-		</div>		
 	</div>
-
 </template>
