@@ -12,10 +12,9 @@ System.config({
     "es6-shim": "npm:es6-shim@0.35.1",
     "event-emitter-lite": "npm:event-emitter-lite@1.0.5",
     "ferrugemjs": "npm:ferrugemjs@0.11.8",
-    "ferrugemjs-router": "npm:ferrugemjs-router@0.0.7",
+    "ferrugemjs-router": "npm:ferrugemjs-router@0.0.8",
     "incremental-dom": "npm:incremental-dom@0.5.1",
     "tslib": "npm:tslib@1.5.0",
-    "page": "npm:page@1.7.1",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -48,7 +47,7 @@ System.config({
     "npm:es6-shim@0.35.1": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:ferrugemjs-router@0.0.7": {
+    "npm:ferrugemjs-router@0.0.8": {
       "page": "npm:page@1.7.1"
     },
     "npm:incremental-dom@0.5.1": {

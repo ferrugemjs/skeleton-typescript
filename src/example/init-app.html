@@ -1,6 +1,5 @@
 <template>
 	<require from="ferrugemjs-router as rt" type="namespace"/>
-	<require from="page as pg" type="script"/>
 	<require from="./header-app/header-section"/>
 	<require from="./todo-app/todo-list as todo-app"/>
 	<require from="./hello-world/hello-world"/>
@@ -12,10 +11,6 @@
 			<route path="/todo-app" view-model="apps/todo-app/todo-list"/>
 			<route path="/fruit-app" view-model="apps/fruit-app/fruit-app"/>
 		</rt:router-view>
-		<script>
-            window.setTimeout(function(){
-              pg("/hello-world/FerrugemJS");
-            },1000);            
-        </script>
+        <rt:router-redirect path="/hello-world/FerrugemJS" timeout="8000"/>
 	</div>
 </template>

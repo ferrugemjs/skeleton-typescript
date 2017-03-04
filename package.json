@@ -21,7 +21,7 @@
       "es6-shim": "npm:es6-shim@0.35.1",
       "event-emitter-lite": "npm:event-emitter-lite@1.0.5",
       "ferrugemjs": "npm:ferrugemjs@^0.11.8",
-      "ferrugemjs-router": "npm:ferrugemjs-router@^0.0.7",
+      "ferrugemjs-router": "npm:ferrugemjs-router@^0.0.8",
       "tslib": "npm:tslib@1.5.0"
     },
     "devDependencies": {}
