@@ -22,7 +22,8 @@
       "event-emitter-lite": "npm:event-emitter-lite@1.0.7",
       "ferrugemjs": "npm:ferrugemjs@^0.11.10",
       "ferrugemjs-router": "npm:ferrugemjs-router@^0.0.11",
-      "tslib": "npm:tslib@1.5.0"
+      "tslib": "npm:tslib@1.5.0",
+      "incremental-dom": "npm:incremental-dom@0.5.1"
     },
     "devDependencies": {}
   },
