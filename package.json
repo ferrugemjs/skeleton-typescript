@@ -23,6 +23,7 @@
       "ferrugemjs": "npm:ferrugemjs@^0.12.0",
       "ferrugemjs-router": "npm:ferrugemjs-router@^0.0.11",
       "incremental-dom": "npm:incremental-dom@0.5.1",
+      "redux": "npm:redux@3.6.0",
       "tslib": "npm:tslib@1.5.0"
     },
     "devDependencies": {}

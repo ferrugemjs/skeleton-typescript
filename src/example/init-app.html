@@ -5,12 +5,17 @@
 	<require from="./hello-world/hello-world"/>
 	<require from="./fruit-app/fruit-app"/>	
 	<div>
+		<!--
 		<header-section/>
+		-->
 		<rt:router-view hashbang="true" style-name="custumizado">
 			<route path="/hello-world/:name" view-model="apps/hello-world/hello-world"/>
 			<route path="/todo-app" view-model="apps/todo-app/todo-list"/>
 			<route path="/fruit-app" view-model="apps/fruit-app/fruit-app"/>
 		</rt:router-view>
-        <rt:router-redirect path="/hello-world/FerrugemJS" timeout="8000"/>
+		<!--
+        <rt:router-redirect path="/hello-world/FerrugemJS" timeout="1000"/>
+        -->
+        <rt:router-redirect path="/fruit-app" timeout="1000"/>
 	</div>
 </template>
