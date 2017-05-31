@@ -1,16 +1,22 @@
 <template>
-	<require from="ferrugemjs-router as rt" type="namespace"/>
+	<require from="ferrugemjs-router/index as rt" type="namespace"/>
 	<require from="./header-app/header-section"/>
 	<require from="./todo-app/todo-list as todo-app"/>
 	<require from="./hello-world/hello-world"/>
 	<require from="./fruit-app/fruit-app"/>	
 	<div>
+		
 		<header-section/>
+		
 		<rt:router-view hashbang="true" style-name="custumizado">
 			<route path="/hello-world/:name" view-model="apps/hello-world/hello-world"/>
 			<route path="/todo-app" view-model="apps/todo-app/todo-list"/>
 			<route path="/fruit-app" view-model="apps/fruit-app/fruit-app"/>
 		</rt:router-view>
-        <rt:router-redirect path="/hello-world/FerrugemJS" timeout="8000"/>
+		
+        <rt:router-redirect path="/hello-world/FerrugemJS" timeout="200"/>
+        <!--
+        <rt:router-redirect path="/fruit-app" timeout="1000"/>
+        -->
 	</div>
 </template>

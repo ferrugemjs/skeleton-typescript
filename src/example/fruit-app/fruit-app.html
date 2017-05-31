@@ -1,6 +1,5 @@
 <template>
-	<require from="../commons/assets/commons-style.css!"></require>
-	<require from="./fruit-store as fruitStore" type="script"></require>
+	<require from="css!../commons/assets/commons-style"></require>
 	<require from="./fruit-item"></require>
 	<style type="text/css">
 		.fruit-app{
@@ -12,18 +11,18 @@
 			float: left;
 		}
 		.fruit-app .fruit-basket{
-			width:420px;
+			width:100%;
+			float:left;
 			text-align: center;
-			height:69px;
+			min-height:69px;
 			margin-top:180px;
 			margin-bottom:20px;
-			background-image:url(dist/example/fruit-app/assets/fruit-basket.png);
+			border: 1px solid red;
 			background-position:center top;
 			background-repeat:no-repeat;
-			overflow:hidden;
 		} 
 		.fruit-app .fruit-basket .fruit-item{
-			margin-bottom:129px;
+			float: left;
 		}
 		.fruit-app .actions{
 			width:420px;
@@ -33,6 +32,8 @@
 		}
 		.fruit-app .fruits img{
 			cursor: move;
+			width:80px;
+			height:20px;
 		}
 	</style>
 	<div>
@@ -52,7 +53,7 @@
 					type="${fruit.type}"
 					/>				
 				</div>
-				<div class="actions" onclick="${fruitStore.default.clear.bind(fruitStore.default)}">
+				<div class="actions" click.trigger="this.clear">
 					<span class="mark-action">[-]</span>
 					<span class="desc">clear</span>
 					<span style="float:right">Fruit count:${this.fruits.length}</span>
