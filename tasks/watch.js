@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
-var proxy = require('http-proxy-middleware');
 var compileTs = require('./compile');
 
 gulp.task('static_serve', function() {
