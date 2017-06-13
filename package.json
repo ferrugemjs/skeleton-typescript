@@ -1,39 +1,32 @@
 {
-  "name": "c-food",
+  "name": "skeleton-typescript",
   "version": "0.0.0",
-  "description": "a basic system",
+  "description": "a basic project",
   "main": false,
   "scripts": {
-    "gulp": "./node_modules/.bin/gulp",
-    "watch": "gulp watch",
-    "compile": "gulp compile",
-    "convert": "gulp template",
-    "build2dist": "jspm bundle dist/init-app/init-app.html build.js --skip-source-maps --minify"
+    "copy:index":"copyfiles ./index.html public",
+    "watch": "npm run copy:index && webpack-dev-server --progress --colors",
+    "build": "npm run copy:index && webpack --config webpack.config.js"
   },
   "author": "ferrugemjs",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-connect": "^2.3.1",
-    "gulp-ferrugemjs": "^0.15.0",
-    "gulp-jsbeautify": "^0.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-typescript": "^3.1.7",
-    "gulp-uglify": "^1.5.2",
-    "require-dir": "^0.3.0",
-    "typescript": "^2.3.3"
+    "copyfiles": "^1.2.0",
+    "css-loader": "^0.28.4",
+    "ferrugemjs-loader": "^0.15.2",
+    "file-loader": "^0.11.2",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.1.0",
+    "typescript": "^2.3.3",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "es6-shim": "^0.35.3",
-    "event-emitter-lite": "^1.0.7",
-    "ferrugemjs": "^0.15.0",
-    "ferrugemjs-router": "^0.15.0",
-    "jquery": "^3.2.1",
-    "moment": "^2.18.1",
-    "require-css": "^0.1.10",
-    "requirejs": "^2.3.3",
-    "tslib": "^1.7.1"
+    "ferrugemjs": "^0.16.3",
+    "ferrugemjs-router": "^0.15.1",
+    "tslib": "^1.7.1",
+    "whatwg-fetch": "^2.0.3"
   }
 }
