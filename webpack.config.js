@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './src/app/app.ts',
+    entry: './app/app.ts',
     output: {
         path: path.resolve(__dirname, './public'), 
         filename: 'bundle.js'
@@ -31,13 +31,10 @@ module.exports = {
 	,resolve: {
 		extensions: [".ts",".html",".js"]
 		,alias:{    		
-			"apps":path.resolve(__dirname, './src')
-			,"ui":path.resolve(__dirname, './src/ui')
-			,"root_app":path.resolve(__dirname, './src')
+			"app":path.resolve(__dirname, './app')
+			,"root_app":path.resolve(__dirname, './app')
 			,"ferrugemjs":"ferrugemjs/dist/core"
 			,"ferrugemjs-router":"ferrugemjs-router/dist/router"
-			,"bootstrap":"bootstrap/dist"
-			,"bootstrap-datepicker":"bootstrap-datepicker/dist"
 		}    
 	}
 }

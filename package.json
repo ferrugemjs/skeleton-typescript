@@ -15,8 +15,6 @@
     "css-loader": "^0.28.4",
     "ferrugemjs-loader": "^0.15.2",
     "file-loader": "^0.11.2",
-    "gulp-replace": "^0.5.4",
-    "http-proxy-middleware": "^0.14.0",
     "style-loader": "^0.18.2",
     "ts-loader": "^2.1.0",
     "typescript": "^2.3.3",
@@ -25,16 +23,9 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "bootstrap-datepicker": "^1.6.4",
-    "bootstrap-validator": "^0.11.9",
     "es6-shim": "^0.35.3",
-    "event-emitter-lite": "^1.0.7",
     "ferrugemjs": "^0.16.3",
     "ferrugemjs-router": "^0.15.1",
-    "jquery": "^3.2.1",
-    "moment": "^2.18.1",
-    "selectize": "^0.12.4",
     "tslib": "^1.7.1",
     "whatwg-fetch": "^2.0.3"
   }
