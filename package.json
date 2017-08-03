@@ -13,7 +13,7 @@
   "devDependencies": {
     "copyfiles": "^1.2.0",
     "css-loader": "^0.28.4",
-    "ferrugemjs-loader": "^0.16.0",
+    "ferrugemjs-loader": "^0.16.3",
     "file-loader": "^0.11.2",
     "style-loader": "^0.18.2",
     "ts-loader": "^2.1.0",
@@ -24,8 +24,8 @@
   },
   "dependencies": {
     "es6-shim": "^0.35.3",
-    "ferrugemjs": "^0.16.3",
-    "ferrugemjs-router": "^0.15.1",
+    "ferrugemjs": "^0.17.3",
+    "ferrugemjs-router": "^0.16.3",
     "tslib": "^1.7.1",
     "whatwg-fetch": "^2.0.3"
   }
