@@ -1,6 +1,6 @@
 export class HelloWorld{
-	name:string;
+	public name:string;
 	constructor(){
-		this.name = "Teste"
+		this.name = "Teste";
 	}
 }
