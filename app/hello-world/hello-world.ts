@@ -1,5 +1,5 @@
 export class HelloWorld{
-	name:string;
+	private name:string;
 	constructor(){
 		this.name = "test"
 	}
