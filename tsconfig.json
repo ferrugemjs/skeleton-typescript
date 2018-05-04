@@ -15,8 +15,8 @@
         ,"baseUrl": "./"
         ,"lib": ["dom", "es6"]
         ,"paths": {
-            "tslib" : ["node_modules/tslib/tslib.d.ts"]
-            ,"event-emitter-lite":["node_modules/event-emitter-lite/dist/amd/event-emitter.d.ts"]
+            "tslib" : ["node_modules/tslib/tslib.d.ts"],
+            "v3rtigo" : ["node_modules/v3rtigo/dist/index.d.ts"]
         }
     },
     "exclude": [
