@@ -47,10 +47,7 @@ module.exports = {
 	,resolve: {
 		extensions: [".js",".ts",".html"]
 		,alias:{    		
-			"app":path.resolve(__dirname, './app')
-			,"root_app":path.resolve(__dirname, './app')
-			,"ferrugemjs":"ferrugemjs/dist/core"
-			,"ferrugemjs-router":"ferrugemjs-router/dist/router"
+			"@": path.resolve(__dirname, './app')
 		}    
 	}
 }

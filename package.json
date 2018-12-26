@@ -5,7 +5,7 @@
   "main": false,
   "scripts": {
     "copy:index": "copyfiles ./index.html public",
-    "start": "npm run copy:index && webpack-dev-server --progress --colors",
+    "watch": "npm run copy:index && webpack-dev-server --progress --colors",
     "build": "npm run copy:index && webpack --config webpack.config.js"
   },
   "author": "ferrugemjs",
@@ -25,9 +25,9 @@
   "dependencies": {
     "es6-shim": "0.35.3",
     "ferrugemjs": "1.7.0",
-    "ferrugemjs-router": "0.28.0",
+    "ferrugemjs-router": "0.31.1",
     "tslib": "1.9.0",
-    "v3rtigo": "0.5.1",
+    "v3rtigo": "0.5.2",
     "whatwg-fetch": "2.0.3"
   }
 }

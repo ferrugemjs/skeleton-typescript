@@ -1,2 +1,3 @@
 //starter
-import "ferrugemjs/bootstrapper";
+import { bootstrapper } from 'ferrugemjs';
+bootstrapper();

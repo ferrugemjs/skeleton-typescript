@@ -15,7 +15,9 @@
         ,"baseUrl": "./"
         ,"lib": ["dom", "es6"]
         ,"paths": {
+            "@/*" : ["src/find-me/*"],
             "tslib" : ["node_modules/tslib/tslib.d.ts"],
+            "ferrugemjs" : ["node_modules/ferrugemjs/dist/core/index.d.ts"],
             "v3rtigo" : ["node_modules/v3rtigo/dist/index.d.ts"]
         }
     },
