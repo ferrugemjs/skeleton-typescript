@@ -28,7 +28,7 @@ module.exports = {
         port: 3333
     },
     module: {
-        loaders: [
+        rules: [
 			{
 				test: modulePath => modulePath.endsWith('.ts') && !modulePath.endsWith('.d.ts'),
 				loader: 'ts-loader'
