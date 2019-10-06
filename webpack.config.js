@@ -15,7 +15,7 @@ polyfills.forEach(polyKey => {
 
 module.exports = {
     entry: {
-        polyfills,
+        // polyfills,
         app:['./app/app.ts']
     },
     output: {
@@ -32,20 +32,35 @@ module.exports = {
 			{
 				test: modulePath => modulePath.endsWith('.ts') && !modulePath.endsWith('.d.ts'),
 				loader: 'ts-loader'
-			}
-			,{ test: /\.html$/,loader:'ferrugemjs-loader'}
-			,{
+            },
+            {
+                test: /\.pug$/,
+                loaders: [
+                  { 
+                    loader:'ferrugemjs-loader',
+                    options:{
+                      templateExtension:".pug"
+                    } 
+                  }
+                  ,'pug-loader'
+                ]
+            },
+			{
                 test: /\.css$/,
                 use: [ 'style-loader', 'css-loader' ]
-            }
-            ,{
+            },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+            },
+            {
     			test: /\.(d\.ts|eot|woff|woff2|ttf|svg|png|jpg)$/,
    				loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
 			}
 		]
     }
 	,resolve: {
-		extensions: [".js",".ts",".html"]
+		extensions: [".js",".scss",".ts",".pug"]
 		,alias:{    		
 			"@": path.resolve(__dirname, './app')
 		}    
