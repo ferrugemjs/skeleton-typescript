@@ -6,7 +6,7 @@ class HelloWorldStore extends Store<string[]>{
         this.state = ['hi'];
     }
     public addMsg(msg:string){
-        this.setState([...this.getState(), msg]);
+        this.setState([...[String(msg),'sssss']]);
     }
 }
 
