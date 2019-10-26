@@ -9,8 +9,8 @@ export class HelloWorld{
 		return helloWorldStore.getState();
 	}
 
-	attached(){
-		setInterval(() => {
+	private attached(){
+		setTimeout(() => {
 			helloWorldStore.addMsg( `new msg:${new Date().getTime()}`);
 		},1000)
 	}
