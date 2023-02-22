@@ -1,8 +1,9 @@
 <template no-model>
     <script init="test">
-        function test({text}){
+        function test({ text, option }) {
             this.text = text;
+            this.option = option;
         }
     </script>
-    <li>${this.text}</li>
+    <li>${this.option}:${this.text}</li>
 </template>

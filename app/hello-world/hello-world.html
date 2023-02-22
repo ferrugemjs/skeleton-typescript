@@ -1,29 +1,39 @@
 <template>
-	<require from="v3rtigo as v3r" type="namespace"/>
-	<require from="./hello-world-store as helloWorldStore" type="script"/>
+	<require from="@ferrugemjs/v3rtigo as v3r" type="namespace" />
+	<require from="./hello-world-store as helloWorldStore" type="script" />
+	<require from="./hello-world.scss" />
 	<require from="./sub-com" />
+	<require from="./app-routes" />
 	<style>
-		.hello-world{
-			width:200px;
-			height:100px;
-			display:block;
-			border:4px dotted gray;	
-			border-radius:10px;
-			text-align:center;
-			line-height:1.8;
-			margin:0px auto;
-			margin-top:18%;
+		.hello-world {
+			width: 200px;
+			height: 100px;
+			display: block;
+			border: 4px dotted gray;
+			border-radius: 10px;
+			text-align: center;
+			line-height: 1.8;
+			margin: 0px auto;
+			margin-top: 18%;
 		}
 	</style>
 	<div class="hello-world">
 		<h4>${this.name}</h4>
-		<v3r:connect-provider
-      		stores="${[helloWorldStore.default]}"
-		>
-			<h6>${this.msgs.length}</h6>
-			<ol>
-				<sub-com each="msg in this.msgs" text="${msg}"/>
-			</ol>
+		<v3r:connect-provider stores="${[helloWorldStore.default]}">
+			<div class="teste">
+				<h6>${this.msgs.length}</h6>
+			</div>
 		</v3r:connect-provider>
+		<div click.trigger="increment()">
+			oxente
+		</div>
+		<!-- <h6>${this.msgs.length}</h6> -->
+		<ol>
+			<!-- <sub-com each="msg in this.msgs" text="${msg}" option="help" /> -->
+		</ol>
+		<app-routes prop1="test1" prop2="test2" prop3="test3" prop4="test4" />
+		<p>
+			<a href="/lazy-app">modules</a>
+		</p>
 	</div>
 </template>

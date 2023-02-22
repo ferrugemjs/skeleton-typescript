@@ -1,13 +1,23 @@
-import {Store} from 'v3rtigo';
+import { Store } from "@ferrugemjs/v3rtigo";
 
 class HelloWorldStore extends Store<string[]>{
-    constructor(){
+    constructor() {
         super();
         this.state = ['hi'];
+
     }
-    public addMsg(msg:string){
-        this.setState([...[String(msg),'sssss']]);
+    public addMsg(msg: string) {
+        this.setState([
+            ...this.getState(),
+            msg,
+        ]);
+
     }
 }
+
+
+// class HelloWorldStore {
+
+// }
 
 export default new HelloWorldStore();

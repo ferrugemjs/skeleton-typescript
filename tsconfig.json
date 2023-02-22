@@ -1,29 +1,40 @@
 {
     "compilerOptions": {
-        "target": "es5"
-        ,"module": "amd"
-        ,"moduleResolution": "classic"
-        ,"outDir": "./public"
-        ,"experimentalDecorators": true
-        ,"noImplicitAny":true       
-        ,"sourceMap": false        
-        ,"declaration": false
-        ,"removeComments":true
-        ,"noEmitHelpers":true 
-        ,"importHelpers":true
-        ,"suppressImplicitAnyIndexErrors": true
-        ,"baseUrl": "./"
-        ,"lib": ["dom", "es6"]
-        ,"paths": {
-            "@/*" : ["src/find-me/*"],
-            "tslib" : ["node_modules/tslib/tslib.d.ts"],
-            "ferrugemjs" : ["node_modules/ferrugemjs/dist/core/index.d.ts"],
-            "v3rtigo" : ["node_modules/v3rtigo/dist/amd/index.d.ts"]
+        "target": "ES2022",
+        "module": "amd",
+        "moduleResolution": "classic",
+        "outDir": "./public",
+        "experimentalDecorators": true,
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "declaration": false,
+        "removeComments": true,
+        "noEmitHelpers": true,
+        "importHelpers": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "baseUrl": "./",
+        "lib": [
+            "dom",
+            "es6"
+        ],
+        "paths": {
+            "tslib": [
+                "node_modules/tslib/tslib.d.ts"
+            ],
+            "@ferrugemjs/library": [
+                "node_modules/@ferrugemjs/library/dist/index.d.ts"
+            ],
+            "@ferrugemjs/v3rtigo": [
+                "node_modules/@ferrugemjs/v3rtigo/dist/amd/index.d.ts"
+            ],
+            "@ferrugemjs/router": [
+                "node_modules/@ferrugemjs/router/dist/index.d.ts"
+            ]
         }
     },
     "exclude": [
-        "node_modules"
-        ,"public"
+        "node_modules",
+        "public"
     ],
     "compileOnSave": false
 }
